@@ -98,6 +98,10 @@ ol, ul, li {
     cursor: pointer;
 }
 
+.favorits__activ {
+    background-image: url('../assets/icon/favorites__like.png');
+}
+
 footer {
     height: 100px;
 }

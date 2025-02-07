@@ -25,6 +25,7 @@ function clone(obj) {
    clonetemplate.querySelector('.card__description').textContent = obj.subscribe
 
    removecard(clonetemplate)
+   addfavorits(clonetemplate)
 
    cardAdd.appendChild(clonetemplate)
 }
@@ -36,11 +37,16 @@ cardobj.forEach(item => {
 
 function removecard(clone) {
    const remove = clone.querySelector('.remove__curd')
-   const itemCard = page.querySelector('.itemCard')
    remove.addEventListener('click', () => {
       remove.parentElement.parentElement.remove();
-
    })
+}
+
+function addfavorits(clone) {
+   const favorits = clone.querySelector('.favorits__btn')
+   favorits.addEventListener('click', () => {
+      favorits.classList.toggle('favorits__activ');
+   });
 }
 
 
