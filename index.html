@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Сайт вакансий</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <h1 class="logo">IT Вакансии</h1>
+                <ul class="header__list">
+                    <li class=""><a href="" class="header__link">О нас</a></li>
+                    <li class=""><a href="" class="header__link">Стжировки</a></li>
+                    <li class=""><a href="" class="header__link">Вакансии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="input__addCard">
+                <input type="text" class="input__card" placeholder="Заголовок">
+                <input type="text" class="input__card" placeholder="Вставьте ссылку">
+                <input type="text" class="input__card" placeholder="Описание">
+                <button class="addCard">Добавить</button>
+            </div>
+            <ul class="card__link">
+
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <template class="item__template">
+        <li class="itemCard">
+            <h2 class="card__title"></h2>
+            <img class="card__img" src="./assets/images/frontend.jpg" alt="">
+            <p class="card__description"></p>
+            <article class="article__btn">
+                <button class="remove__curd"></button>
+                <button class="favorits__btn favorits__activ"></button>
+            </article>
+        </li>
+    </template>
+
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

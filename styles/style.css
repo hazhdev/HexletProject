@@ -1,0 +1,103 @@
+a {
+    text-decoration: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__list {
+    display: flex;
+    gap: 20px;
+    color: black;
+}
+
+.header__link {
+    color: black;
+}
+
+.input__addCard {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.input__card {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.addCard {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card__link {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.itemCard {
+    width: 300px;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.article__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remove__curd {
+    background-image: url('../assets/icon/delete.png');
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.favorits__btn {
+    background-image: url('../assets/icon/favorites.png');
+    width: 90px;
+    height: 90px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    height: 100px;
+}
