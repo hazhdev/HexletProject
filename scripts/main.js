@@ -9,44 +9,66 @@ const cardobj = [
    {
       title: 'Backend',
       img: './assets/images/backend.jpg',
-      subscribe: 'Мы ищем опытных Backend разработчиков',
-      delete: './assets/icon/delete.png'
+      subscribe: 'Мы ищем опытных Backend разработчиков'
+   },
+   {
+      title: 'Devops',
+      img: './assets/images/backend.jpg',
+      subscribe: 'Мы ищем опытных Devops инженеров'
    }
-]
+];
 
-const template = page.querySelector('.item__template').content
-const cardAdd = page.querySelector('.card__link')
+const template = page.querySelector('.item__template').content;
+const cardAdd = page.querySelector('.card__link');
+const addCard = page.querySelector('.addCard');
 
 function clone(obj) {
-   const clonetemplate = template.cloneNode(true)
+   const clonetemplate = template.cloneNode(true);
 
-   clonetemplate.querySelector('.card__title').textContent = obj.title
-   clonetemplate.querySelector('.card__img').src = obj.img
-   clonetemplate.querySelector('.card__description').textContent = obj.subscribe
+   clonetemplate.querySelector('.card__title').textContent = obj.title;
+   clonetemplate.querySelector('.card__img').src = obj.img;
+   clonetemplate.querySelector('.card__description').textContent = obj.subscribe;
 
-   removecard(clonetemplate)
-   addfavorits(clonetemplate)
+   removecard(clonetemplate);
+   addfavorits(clonetemplate);
 
-   cardAdd.appendChild(clonetemplate)
+   cardAdd.appendChild(clonetemplate);
 }
 
 cardobj.forEach(item => {
-   clone(item)
+   clone(item);
 });
 
-
 function removecard(clone) {
-   const remove = clone.querySelector('.remove__curd')
+   const remove = clone.querySelector('.remove__curd');
    remove.addEventListener('click', () => {
-      remove.parentElement.parentElement.remove();
-   })
+      remove.closest('.itemCard').remove();
+   });
 }
 
 function addfavorits(clone) {
-   const favorits = clone.querySelector('.favorits__btn')
+   const favorits = clone.querySelector('.favorits__btn');
    favorits.addEventListener('click', () => {
       favorits.classList.toggle('favorits__activ');
    });
 }
 
+function addNewCard() {
+   const addTitle = page.querySelector(".input__title").value.trim();
+   const addSrc = page.querySelector('.input__src').value.trim();
+   const addDescription = page.querySelector(".input__description").value.trim();
 
+   const newCard = {
+      title: addTitle,
+      img: addSrc,
+      subscribe: addDescription
+   };
+
+   clone(newCard);
+
+   page.querySelector(".input__title").value = '';
+   page.querySelector('.input__src').value = '';
+   page.querySelector(".input__description").value = '';
+}
+
+addCard.addEventListener('click', addNewCard);
