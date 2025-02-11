@@ -2,9 +2,8 @@ const page = document.querySelector('body');
 const cardobj = [
    {
       title: 'Frontend',
-      img: './assets/images/frontend.jpg',
+      img: './assets/images/backend.jpg',
       subscribe: 'Мы ищем опытных Frontend разработчиков',
-      delete: './assets/icon/delete.png'
    },
    {
       title: 'Backend',
@@ -71,4 +70,6 @@ function addNewCard() {
    page.querySelector(".input__description").value = '';
 }
 
-addCard.addEventListener('click', addNewCard);
+addCard.addEventListener('click', () => {
+   addNewCard();
+});

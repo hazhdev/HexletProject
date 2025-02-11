@@ -63,13 +63,17 @@ ol, ul, li {
 
 .card__link {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 100px;
 } 
 
 .itemCard {
     width: 300px;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 19px 5px green;
+    margin-top: 100px;
 }
 
 .card__img {
@@ -83,26 +87,29 @@ ol, ul, li {
 }
 
 .remove__curd {
-    background-image: url('../assets/icon/delete.png');
+    background-image: url('/assets/icon/delete.svg');
     width: 60px;
     height: 60px;
     border: none;
-    background-color: #fff;
+    background-color: gray;
     cursor: pointer;
 }
 
 .favorits__btn {
-    background-image: url('../assets/icon/favorites.png');
+    background-image: url('/assets/icon/favorites.svg');
     width: 90px;
     height: 90px;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .favorits__activ {
-    background-image: url('../assets/icon/favorites__like.png');
+    background-image: url('/assets/icon/favorites__like.svg');
 }
+
 
 footer {
     height: 100px;
