@@ -65,9 +65,9 @@ function addNewCard() {
 
    clone(newCard);
 
-   page.querySelector(".input__title").value = '';
-   page.querySelector('.input__src').value = '';
-   page.querySelector(".input__description").value = '';
+   addTitle.value = '';
+   addSrc.value = '';
+   addDescription.value = '';
 }
 
 addCard.addEventListener('click', () => {

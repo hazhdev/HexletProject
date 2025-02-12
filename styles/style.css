@@ -87,7 +87,7 @@ ol, ul, li {
 }
 
 .remove__curd {
-    background-image: url('/assets/icon/delete.svg');
+    background-image: url('./assets/icon/delete.svg');
     width: 60px;
     height: 60px;
     border: none;
@@ -96,7 +96,7 @@ ol, ul, li {
 }
 
 .favorits__btn {
-    background-image: url('/assets/icon/favorites.svg');
+    background-image: url('./assets/icon/favorites.svg');
     width: 90px;
     height: 90px;
     border: none;
@@ -107,7 +107,7 @@ ol, ul, li {
 }
 
 .favorits__activ {
-    background-image: url('/assets/icon/favorites__like.svg');
+    background-image: url('./assets/icon/favorites__like.svg');
 }
 
 
