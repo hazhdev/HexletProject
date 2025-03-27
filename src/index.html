@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт вакансий</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <h1 class="logo">IT Вакансии</h1>
+        <ul class="header__list">
+          <li><a href="" class="header__link">О нас</a></li>
+          <li><a href="" class="header__link">Стажировки</a></li>
+          <li><a href="" class="header__link">Вакансии</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <form class="input__addCard">
+        <input type="text" class="input__title" placeholder="Заголовок" required>
+        <input type="text" class="input__src" placeholder="Вставьте ссылку" required>
+        <input type="text" class="input__description" placeholder="Описание" required>
+        <button type="submit" class="addCard">Добавить</button>
+      </form>
+      <ul class="card__link"></ul>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <!-- Шаблон карточки -->
+  <template class="item__template">
+    <li class="itemCard">
+      <h2 class="card__title"></h2>
+      <img class="card__img" src="./assets/images/frontend.jpg" alt="">
+      <p class="card__description"></p>
+      <article class="article__btn">
+        <button class="remove__curd"></button>
+        <button class="edit__btn">Редактировать</button>
+        <button class="favorits__btn"></button>
+      </article>
+    </li>
+  </template>
+
+  <!-- Модальное окно -->
+  <div class="modal" style="display: none;">
+    <div class="modal__content">
+      <h2>Редактировать карточку</h2>
+      <input type="text" class="modal__title" placeholder="Заголовок">
+      <input type="text" class="modal__src" placeholder="Вставьте ссылку">
+      <input type="text" class="modal__description" placeholder="Описание">
+      <button class="modal__save">Сохранить</button>
+      <button class="modal__close">Закрыть</button>
+    </div>
+  </div>
+
+  <script src="../dist/bundle.js"></script>
+</body>
+</html>
